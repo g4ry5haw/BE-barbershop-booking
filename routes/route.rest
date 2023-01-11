@@ -1,0 +1,31 @@
+# get summary count of available timeslots by day
+GET http://localhost:3000/api/appointments
+###
+
+# get list of all time slots for a specific day
+GET http://localhost:3000/api/appointments/2023-01-28
+###
+
+# get list of all appointments for a user
+GET http://localhost:3000/api/appointments/booked/gs
+###
+
+# get list of all users
+GET http://localhost:3000/api/users/
+###
+
+# update availability for a specific appointment (switch between unavailable 0 and available 1)
+PATCH  http://localhost:3000/api/appointments/63bd329544e4da789091b5a0
+Content-Type: application/json
+
+{
+    "username": "gs",
+    "available": 0
+}
+
+###
+
+# Test the stripe payment function
+POST http://localhost:3000/api/payment
+
+###
