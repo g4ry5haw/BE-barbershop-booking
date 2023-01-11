@@ -22,7 +22,7 @@ app.get("/api/appointments/:date", getAppointmentsByDate);
 app.get("/api/appointments/booked/:username", getAppointmentsByUsername);
 app.get("/api/users", getUsers);
 
-app.get("api/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.status(200).send({ msg: "server up and running" });
 });
 

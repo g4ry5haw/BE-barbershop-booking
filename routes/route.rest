@@ -1,21 +1,21 @@
 # get summary count of available timeslots by day
-GET http://localhost:3000/api/appointments
+GET https://rich-gold-basket-clam-cape.cyclic.app/api/appointments
 ###
 
 # get list of all time slots for a specific day
-GET http://localhost:3000/api/appointments/2023-01-28
+GET https://rich-gold-basket-clam-cape.cyclic.app/api/appointments/2023-01-28
 ###
 
 # get list of all appointments for a user
-GET http://localhost:3000/api/appointments/booked/gs
+GET https://rich-gold-basket-clam-cape.cyclic.app/api/appointments/booked/gs
 ###
 
 # get list of all users
-GET http://localhost:3000/api/users/
+GET https://rich-gold-basket-clam-cape.cyclic.app/api/users/
 ###
 
 # update availability for a specific appointment (switch between unavailable 0 and available 1)
-PATCH  http://localhost:3000/api/appointments/63bd329544e4da789091b5a0
+PATCH  https://rich-gold-basket-clam-cape.cyclic.app/api/appointments/63bd329544e4da789091b5a0
 Content-Type: application/json
 
 {
@@ -26,6 +26,6 @@ Content-Type: application/json
 ###
 
 # Test the stripe payment function
-POST http://localhost:3000/api/payment
+POST https://rich-gold-basket-clam-cape.cyclic.app/api/payment
 
 ###
