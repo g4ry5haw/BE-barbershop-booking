@@ -4,7 +4,7 @@ An app built for browsing, booking and paying for appointments with your local b
 
 ## Description
 
-The app was built as a group project during the final phase of the Northcoders Software Development bootcamp which ran from October-22 to January-23. The goal was to build a fully-functioning software product using at least 2 new technologies that hadn’t been taught on the Bootcamp. These were chosen as MongoDB for the back-end and React Native for the front-end
+The app was built as a group project during the final phase of the Northcoders Software Development bootcamp which ran from October-22 to January-23. The goal was to build a fully-functioning software product using at least 2 new technologies that hadn’t been taught on the Bootcamp. These were chosen as MongoDB for the back-end and React Native for the front-end.
 
 The project was phased over 3 weeks:
 
@@ -33,7 +33,7 @@ The API's are hosted on cyclic. You can check the server is up and running [here
 
 ### Installing
 
-Fork and clone this repository for the front-end
+Fork and clone this repository for the back-end
 
 Run `npm install` to install all dependencies
 
@@ -43,15 +43,17 @@ Add a `.env` file in the root folder containing 2 variables:
 
 > `STRIPE_SECRET_KEY:`
 
-The `DATABASE_URL:` is the link to your MongoDB Atlas hosted database. See the [documentation](https://www.mongodb.com/docs/atlas/getting-started/) to set this up.
+The `DATABASE_URL` is the link to your MongoDB Atlas hosted database. See the [documentation](https://www.mongodb.com/docs/atlas/getting-started/) to set this up.
 
 The format will be as follows :
 
-`mongodb+srv://<username>:<password>@cluster0.io9vsdw.mongodb.net/<database name>`
+`mongodb+srv://<username>:<password>@cluster0.<cluster>.mongodb.net/<database name>`
 
-> _replace `<username>`, `<password>` & `<database name>` with those from MongoDB Atlas_
+> replace `<username>`, `<password>`, `<cluster>` & `<database name>` with those from MongoDB Atlas.
 
-The `STRIPE_SECRET_KEY:` is provided by Stripe for testing purposes when you [set up an account](https://dashboard.stripe.com/register). It begins with `sk_test`
+The `STRIPE_SECRET_KEY` is provided by Stripe for testing purposes when you [set up an account](https://dashboard.stripe.com/register). It begins with `sk_test`
+
+If you wish to host your own server then use a service such as [cyclic](cyclic.sh) and view the README.md in the front-end repo for additonal steps to update the base URL for the API requests.
 
 ### Executing the program
 
@@ -72,11 +74,11 @@ GET https://rich-gold-basket-clam-cape.cyclic.app/api/appointments
 ###
 ```
 
-Alternatively use a platform such as [Postman](https://www.postman.com/)
+Alternatively use a platform such as [Postman](https://www.postman.com/) to test the API's.
 
 ## Authors
 
-This app was made as a final project for the Northcoders full-stack software development bootcamp
+This app was made as a final project for the Northcoders full-stack software development bootcamp.
 
 The project team was :
 
