@@ -6,19 +6,17 @@ An app built for browsing, booking and paying for appointments with your local b
 
 The app was built as a group project during the final phase of the Northcoders Software Development bootcamp which ran from October-22 to January-23. The goal was to build a fully-functioning software product using at least 2 new technologies that hadn’t been taught on the Bootcamp. These were chosen as MongoDB for the back-end and React Native for the front-end
 
-The project was phased over 3 :
+The project was phased over 3 weeks:
 
-- Week 1 - idea generation, spiking and RATs, define tasks on kanban board using Trello
-- Week 2 - build the back-end using MongoDB. Start of front-end build using React Native
+- Week 1 - idea generation, spiking and RATs, defining tasks on kanban board using Trello
+- Week 2 - build the back-end using MongoDB. Start of the front-end build using React Native
 - Week 3 - finalisation of the front-end
 
-The front-end and back-end are in 2 separate repositories. The front-end repo can be accesed [here](https://github.com/g4ry5haw/FE-barbershop-booking).
+The front-end and back-end are in 2 separate repositories. The corresponding front-end repo can be accesed [here](https://github.com/g4ry5haw/FE-barbershop-booking).
 
-The back-end incldues a hosted MongoDB Atlas database.
+The back-end uses a hosted MongoDB Atlas database.
 
-The API's are hosted on cyclic. You can check the server is up and running with the url :
-
-https://rich-gold-basket-clam-cape.cyclic.app/api/health
+The API's are hosted on cyclic. You can check the server is up and running [here](https://rich-gold-basket-clam-cape.cyclic.app/api/health)
 
 ## Getting Started
 
@@ -45,7 +43,7 @@ Add a `.env` file in the root folder containing 2 variables:
 
 > `STRIPE_SECRET_KEY:`
 
-The database URL is the link to your MongoDB Atlas hosted database. See the [documentation](https://www.mongodb.com/docs/atlas/getting-started/) to set this up.
+The `DATABASE_URL:` is the link to your MongoDB Atlas hosted database. See the [documentation](https://www.mongodb.com/docs/atlas/getting-started/) to set this up.
 
 The format will be as follows :
 
@@ -53,6 +51,36 @@ The format will be as follows :
 
 > _replace `<username>`, `<password>` & `<database name>` with those from MongoDB Atlas_
 
-The Stripe secret key is provided by Stripe for testing purposes when you [set up an account](https://dashboard.stripe.com/register). It begins with `sk_test`
+The `STRIPE_SECRET_KEY:` is provided by Stripe for testing purposes when you [set up an account](https://dashboard.stripe.com/register). It begins with `sk_test`
 
 ### Executing the program
+
+Populate the database by running `node runseeds.js`. This will create 28 days of appointments and the following users:
+
+| **username** | **password** |
+| ------------ | :----------: |
+| gs           |   password   |
+| nb           |   password   |
+| rn           |   password   |
+| rm           |   password   |
+
+Check the database is populated using the API requests on `route.rest`. This requires installing the VS Code extension **REST Client**.
+
+```javascript
+'get summary count of available timeslots by day'
+GET https://rich-gold-basket-clam-cape.cyclic.app/api/appointments
+###
+```
+
+Alternatively use a platform such as [Postman](https://www.postman.com/)
+
+## Authors
+
+This app was made as a final project for the Northcoders full-stack software development bootcamp
+
+The project team was :
+
+- Nasser Benashur
+- Robbie McDonough
+- Ryan Nolan
+- Gary Shaw

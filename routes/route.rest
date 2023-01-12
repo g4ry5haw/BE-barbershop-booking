@@ -15,7 +15,8 @@ GET https://rich-gold-basket-clam-cape.cyclic.app/api/users/
 ###
 
 # update availability for a specific appointment (switch between unavailable 0 and available 1)
-PATCH  https://rich-gold-basket-clam-cape.cyclic.app/api/appointments/63bd329544e4da789091b5a0
+# update the <appointment id> at the end of the URL
+PATCH  https://rich-gold-basket-clam-cape.cyclic.app/api/appointments/<appointment id>
 Content-Type: application/json
 
 {
